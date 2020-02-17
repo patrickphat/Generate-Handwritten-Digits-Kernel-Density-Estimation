@@ -1,6 +1,14 @@
 # Generate-Handwritten-Digits-Kernel-Density-Estimation
 
-Kernel Density Estimation (KDE) is a non-parametric method for estimating the probability of a given point, using a dataset. This is an implementation of using numpy.
+Kernel Density Estimation (KDE) is a non-parametric method for estimating the probability of a given point, using a dataset. This is an implementation of using numpy, with the goal of sampling new images from MNIST dataset.
+![](sample/scott_1.png)
+![](sample/scott_2.png)
+![](sample/scott_3.png)
+![](sample/scott_4.png)
+![](sample/silverman_1.png)
+![](sample/silverman_2.png)
+![](sample/silverman_3.png)
+![](sample/silverman_4.png)
 
 ## Usage:
 
@@ -57,15 +65,6 @@ original,sample = Estimator.random_sample(scaling_factor=1e-1)
 **Note**
 the bigger the `scaling_factor`, the more the generated images fluctuate
 
-### Generated MNIST Samples
-![](sample/scott_1.png)
-![](sample/scott_2.png)
-![](sample/scott_3.png)
-![](sample/scott_4.png)
-![](sample/silverman_1.png)
-![](sample/silverman_2.png)
-![](sample/silverman_3.png)
-![](sample/silverman_4.png)
 
 ## Implementation
 You can access to the experimental notebook at [this link](https://drive.google.com/file/d/1znM3U2-_hXisowmLXrcouida5BYdnVBF/view?usp=sharing).
