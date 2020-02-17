@@ -24,7 +24,7 @@ Estimator = KDE(kernel="univariate_gaussian",univariate_bandwidth=bandwidth)
 Estimator.fit(x_train)
 
 # Estimating bandwidth
-est_density = Estimator.predict(x_test,y_test,batch_size=100)
+est_density = Estimator.predict(x_test,batch_size=100)
 
 ```
 
@@ -40,7 +40,7 @@ Estimator = KDE(kernel="multivariate_gaussian", bandwidth_estimator=bandwidth_es
 Estimator.fit(x_train,y_train)
 
 # Estimating bandwidth
-est_density = Estimator.predict(x_test,y_test,batch_size=100)
+est_density = Estimator.predict(x_test,batch_size=100)
 ```
 
 **Note:**
