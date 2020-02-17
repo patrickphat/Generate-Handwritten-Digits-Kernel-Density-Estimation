@@ -27,9 +27,6 @@ Also, we can use multivariate gaussian kernel to estimate density at one point i
 # Bandwidth estimator choice
 bandwidth_estimator="silverman"
 
-train_size = 20000
-test_size = 10
-
 # Use multivariate kernel, and scott rule to estimate bandwidth H
 Estimator = KDE(kernel="multivariate_gaussian", bandwidth_estimator=bandwidth_estimator)
 Estimator.fit(x_train,y_train)
