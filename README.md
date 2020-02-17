@@ -48,20 +48,23 @@ est_density = Estimator.predict(x_test,y_test,batch_size=100)
 - If run out ram, please kindly decrease batch_size
 
 ### Drawing new sample using KDE
-1. Estimate bandwidth matrix $H$ using Silverman's rule or Scott's rule
-2. Random pick a high density sample from a chosen class $x_r$
-3. Draw a random variable from multivariate normal distribution $ \mathcal{N}(\mu=x_r,\Sigma=H*k) $
+![](sampling_illustration.png)
 
-Where k is the scaling factor, the larger k is, the more  different the image from the source image $x_r$ is. This method strong assumes that the data comes from a mixture of gaussians and each gaussian has equal covariance. Emperically I choose $k=1e-2$ for Silverman's bandwidth and $k=1e-1$ for the best result.**
+
 
 ```python
 # Use multivariate kernel, and scott's rule or silverman's rule to estimate bandwidth H
 Estimator = KDE(kernel="multivariate_gaussian", bandwidth_estimator="scott")
 Estimator.fit(x_train_pca_scaled[:num_train],y_train[:num_train])
 
+# Scaling factor 
+k = 1e-1
+
 # Generate sample images
-original,sample = Estimator.random_sample(scaling_factor=1e-1)
+original,sample = Estimator.random_sample(scaling_factor=k)
 ```
+Where k is the scaling factor, the larger k is, the more  different the image from the source image $x_r$ is. This method strong assumes that the data comes from a mixture of gaussians and each gaussian has equal covariance. Emperically I choose $k=1e-2$ for Silverman's bandwidth and $k=1e-1$ for the best result.**
+
 **Note**
 the bigger the `scaling_factor`, the more the generated images fluctuate
 
