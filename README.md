@@ -4,6 +4,7 @@ Kernel Density Estimation (KDE) is a non-parametric method for estimating the pr
 
 **Usage:**
 
+```python
 # Choice of bandwidth
 bandwidth = 2000
 
