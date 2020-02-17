@@ -54,12 +54,23 @@ Estimator.fit(x_train_pca_scaled[:num_train],y_train[:num_train])
 # Generate sample images
 original,sample = Estimator.random_sample(scaling_factor=1e-1)
 ```
+**Note**
+the bigger the `scaling_factor`, the more the generated images fluctuate
+
+### Generated MNIST Samples
+![](sample/scott_1.png)
+![](sample/scott_2.png)
+![](sample/scott_3.png)
+![](sample/scott_4.png)
+![](sample/silverman_1.png)
+![](sample/silverman_2.png)
+![](sample/silverman_3.png)
+![](sample/silverman_4.png)
 
 ## Implementation
 You can access to the experimental notebook at [this link](https://drive.google.com/file/d/1znM3U2-_hXisowmLXrcouida5BYdnVBF/view?usp=sharing).
 Please kindly include `KDE.py` to the notebook to run properly
-**Note**
-the bigger the `scaling_factor`, the more the generated images fluctuate
+
 
 ## References
 [1] [webel od - Intro to Kernel Density Estimation](https://www.youtube.com/watch?v=x5zLaWT5KPs)<br>
