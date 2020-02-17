@@ -2,9 +2,9 @@
 
 Kernel Density Estimation (KDE) is a non-parametric method for estimating the probability of a given point, using a dataset. This is an implementation of using numpy.
 
-**Usage:**
+## Usage:
 
-## Extended Univariate Gaussian Kernel
+### Extended Univariate Gaussian Kernel
 We introduce norm to leverage univariate kernel to work with high dimension (read the Report.md)
 
 ```python
@@ -18,7 +18,7 @@ Estimator.fit(x_train)
 
 ```
 
-## Multivariate Gaussian Kernel
+### Multivariate Gaussian Kernel
 Also, we can use multivariate gaussian kernel to estimate density at one point in high dimension
 
 ```python
