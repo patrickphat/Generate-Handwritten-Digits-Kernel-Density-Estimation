@@ -63,7 +63,7 @@ k = 1e-1
 # Generate sample images
 original,sample = Estimator.random_sample(scaling_factor=k)
 ```
-Where k is the scaling factor, the larger k is, the more  different the image from the source image $x_r$ is. This method strong assumes that the data comes from a mixture of gaussians and each gaussian has equal covariance. Emperically I choose $k=1e-2$ for Silverman's bandwidth and $k=1e-1$ for the best result.**
+Where k is the scaling factor, the larger k is, the more  different the image from the source image `x_r` is. This method strong assumes that the data comes from a mixture of gaussians and each gaussian has equal covariance. Emperically I choose `k=1e-2` for Silverman's bandwidth and `k=1e-1` for the best result.**
 
 **Note**
 the bigger the `scaling_factor`, the more the generated images fluctuate
