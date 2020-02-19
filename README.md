@@ -44,8 +44,8 @@ est_density = Estimator.predict(x_test,batch_size=100)
 ```
 
 **Note:**
-- The bigger batch_size, the faster the operation goes but more ram-dependent
-- If run out ram, please kindly decrease batch_size
+- The bigger `batch_size`, the faster the operation goes but more ram-dependent
+- If run out ram, please kindly decrease `batch_size`
 
 ### Drawing new sample using KDE
 ![](sampling_illustration.png)
